@@ -27,7 +27,7 @@ The image dataset is not archived directly in this repository. It is available f
 #### Instructions to download the data:
 
 1.  **Go to the Releases page:** Click on the link below to access the list of releases:  
-    ➡️ **[Go to Project Releases](https://github.com/)ricca200xx/Scratch-CNN-Image-Recognition/releases)** 
+    ➡️ **[Go to Project Releases](https://github.com/ricca200xx/Scratch-CNN-Image-Recognition/releases)** 
 
 2.  **Download the archive:** Look for the most recent release (e.g., `v1.0`) and download the `dataset.zip` file from the "Assets" section.
 
