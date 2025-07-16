@@ -12,23 +12,40 @@ This project serves as a practical, hands-on application of fundamental deep lea
 
 The repository is organized as follows:
 
--   **/data**: Contains the training and testing image datasets.
 -   **/notebooks**: Includes the Jupyter Notebook with the complete Python code for the model.
--   **/results**: Contains the final prediction output.
+-   **/results**: Contains the final prediction output (`submission.csv`).
 -   **README.md**: This report file.
+
+*Note: The dataset is not included in the repository to keep it lightweight. Please see the Dataset section below for instructions on how to download it.*
+
+---
+
+### Dataset 🖼️
+
+The image dataset is not archived directly in this repository. It is available for download from the **"Releases"** section of this project.
+
+#### Instructions to download the data:
+
+1.  **Go to the Releases page:** Click on the link below to access the list of releases:  
+    ➡️ **[Go to Project Releases](https://github.com/TUO_USERNAME/NOME_DEL_TUO_PROGETTO/releases)** *(Remember to replace `TUO_USERNAME` and `NOME_DEL_TUO_PROGETTO` with your actual username and project name)*
+
+2.  **Download the archive:** Look for the most recent release (e.g., `v1.0`) and download the `dataset.zip` file from the "Assets" section.
+
+3.  **Unzip the file:** Extract the contents of `dataset.zip` into the main (root) folder of your project.
+
+This will automatically create the `/data` folder with the `train_set` and `test_set`, ready to be used by the notebook.
 
 ---
 
 ### Model Architecture & Training 🛠️
 
-The model is a **custom-coded Convolutional Neural Network (CNN)**. Key architectural features and the training process include:
+The model is a **custom-coded Convolutional Neural Network (CNN)** built with PyTorch.
 
-*(**Your action here:** Briefly describe your CNN. For example: "The architecture consists of three convolutional layers with ReLU activation functions, followed by max-pooling layers. After flattening, two fully-connected layers lead to the final output." You can find this in your `images_clasification_model.ipynb` file.)*
+*(**Your action here:** Briefly describe your CNN. For example: "The architecture consists of three convolutional layers with ReLU activation functions, followed by max-pooling layers. After flattening, two fully-connected layers lead to the final output.")*
 
 The model was trained from scratch using the following methods:
 
 -   **Framework:** PyTorch
--   **Data Augmentation:** *(Mention any techniques you used, e.g., random flips, rotations)*
 -   **Optimizer:** *(e.g., Adam, SGD)*
 -   **Loss Function:** *(e.g., Cross-Entropy Loss)*
 -   **Best Practices:** The model was trained using early stopping and regularization (Dropout) to prevent overfitting.
@@ -37,27 +54,21 @@ For a complete implementation, please see the [**Jupyter Notebook**](./notebooks
 
 ---
 
-### Results & Evaluation 📊
-
-The model's performance was evaluated based on **classification accuracy** on the unseen test set. The final predictions are available in the `submission.csv` file located in the `results` folder.
-
-*(**Optional - for an even better report:** If you have performance metrics like accuracy or a confusion matrix from your notebook, you can add a screenshot of the plot here.)*
-
-**Example of how to add an image:**
-`![Confusion Matrix](path/to/your/confusion_matrix.png)`
-
----
-
 ### How to Run the Code
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-project-name.git](https://github.com/your-username/your-project-name.git)
+    git clone [https://github.com/TUO_USERNAME/NOME_DEL_TUO_PROGETTO.git](https://github.com/TUO_USERNAME/NOME_DEL_TUO_PROGETTO.git)
+    cd NOME_DEL_TUO_PROGETTO
     ```
-2.  **Install dependencies:**
+
+2.  **Download the dataset:** Follow the instructions in the **Dataset** section above to download and unzip the data.
+
+3.  **Install dependencies:**
+    *(It is recommended to create a `requirements.txt` file)*
     ```bash
-    pip install -r requirements.txt
+    pip install torch torchvision pandas matplotlib jupyter
     ```
-    *(**Your action here:** You should create a `requirements.txt` file listing the libraries needed, like `torch`, `torchvision`, `pandas`, `matplotlib`)*
-3.  **Open and run the notebook:**
-    Navigate to the `notebooks/` directory and open `images_clasification_model.ipynb` in Jupyter Lab or Notebook.
+
+4.  **Open and run the notebook:**
+    Navigate to the `/notebooks` directory and open `images_clasification_model.ipynb` in Jupyter Lab or Notebook to see the complete process of training and evaluation.
