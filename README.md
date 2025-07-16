@@ -58,7 +58,7 @@ For a complete implementation, please see the [**Jupyter Notebook**](./notebooks
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/ricca200xx/Scratch-CNN-Image-Recognition.git](https://github.com/ricca200xx/Scratch-CNN-Image-Recognition.git)
+    git clone https://github.com/ricca200xx/Scratch-CNN-Image-Recognition.git
     cd Scratch-CNN-Image-Recognition
     ```
 
