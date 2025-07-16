@@ -41,7 +41,7 @@ This will automatically create the `/data` folder with the `train_set` and `test
 
 The model is a **custom-coded Convolutional Neural Network (CNN)** built with PyTorch.
 
-*(**Your action here:** Briefly describe your CNN. For example: "The architecture consists of three convolutional layers with ReLU activation functions, followed by max-pooling layers. After flattening, two fully-connected layers lead to the final output.")*
+*The architecture consists of three convolutional layers with ReLU activation functions, followed by max-pooling layers. After flattening, two fully-connected layers lead to the final output.*
 
 The model was trained from scratch using the following methods:
 
