@@ -58,8 +58,8 @@ For a complete implementation, please see the [**Jupyter Notebook**](./notebooks
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/TUO_USERNAME/NOME_DEL_TUO_PROGETTO.git](https://github.com/TUO_USERNAME/NOME_DEL_TUO_PROGETTO.git)
-    cd NOME_DEL_TUO_PROGETTO
+    git clone [https://github.com/ricca200xx/Scratch-CNN-Image-Recognition.git](https://github.com/ricca200xx/Scratch-CNN-Image-Recognition.git)
+    cd Scratch-CNN-Image-Recognition
     ```
 
 2.  **Download the dataset:** Follow the instructions in the **Dataset** section above to download and unzip the data.
