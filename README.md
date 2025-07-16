@@ -43,18 +43,35 @@ The dataset is not stored directly in this repository to keep it lightweight. It
 
 ### Model Architecture & Training 🛠️
 
-The model is a **custom-coded Convolutional Neural Network (CNN)** built with PyTorch.
+The model is a **custom Convolutional Neural Network (CNN)** designed and implemented in PyTorch. The architecture is logically separated into two main components: a **feature extractor** composed of convolutional layers and a **classifier** made of fully-connected layers.
 
-*The architecture consists of three convolutional layers with ReLU activation, each followed by a max-pooling layer. The features are then flattened and passed through two fully-connected layers to produce the final classification.*
+#### Architectural Breakdown 🧠
 
-The model was trained from scratch using the following specifications:
+The network processes `40x40x3` input images through the following layers:
 
--   **Framework:** PyTorch
--   **Optimizer:** *(e.g., Adam, SGD)*
--   **Loss Function:** *(e.g., Cross-Entropy Loss)*
--   **Best Practices:** The training process included early stopping and regularization (Dropout) to prevent overfitting.
+1.  **Feature Extractor (Convolutional Base):** This part of the network is responsible for identifying low-level and high-level features (edges, textures, shapes) in the images. It consists of three sequential blocks, each containing:
+    * **Convolutional Layer:** Applies a set of filters to detect features.
+    * **ReLU Activation:** Introduces non-linearity, allowing the model to learn more complex patterns.
+    * **Max-Pooling Layer:** Down-samples the feature map, reducing dimensionality and making the model more robust to variations in feature positions.
 
-For the complete implementation, please see the [**Jupyter Notebook**](./images_clasification_model.ipynb).
+2.  **Classifier (Fully-Connected Head):** After feature extraction, the 2D feature maps are flattened into a 1D vector and fed into the classifier:
+    * **Flatten Layer:** Transitions from the convolutional base to the dense layers.
+    * **Fully-Connected Layer 1 (Dense):** A standard neural network layer that learns combinations of the features extracted by the convolutional base.
+    * **Dropout:** A regularization technique that randomly sets a fraction of input units to 0 during training to prevent overfitting.
+    * **Fully-Connected Layer 2 (Output):** The final layer that produces the raw scores (logits) for each of the 20 classes.
+
+#### Training Protocol ⚙️
+
+The model was trained from scratch with the following configuration:
+
+* **Framework:** **PyTorch**
+* **Optimizer:** **Adam** (Adaptive Moment Estimation), an efficient optimization algorithm that adapts the learning rate for each parameter, making it well-suited for computer vision tasks.
+* **Loss Function:** **Cross-Entropy Loss**, the industry-standard loss function for multi-class classification problems.
+* **Key Training Strategies:**
+    * **Early Stopping:** The training process was monitored using a validation set. Training was halted when the validation loss stopped improving to save the model at its point of peak performance.
+    * **Regularization:** Dropout was used to prevent neuron co-adaptation and improve the model's ability to generalize to unseen data.
+
+For a line-by-line implementation and to see the exact hyperparameters used, please review the [**Jupyter Notebook**](./images_clasification_model.ipynb).
 
 ---
 
