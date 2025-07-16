@@ -1,4 +1,4 @@
- Custom CNN for Image Classification from Scratch
+# Custom CNN for Image Classification from Scratch
 
 A hands-on project building a Convolutional Neural Network from the ground up to classify images into 20 distinct categories using PyTorch.
 
