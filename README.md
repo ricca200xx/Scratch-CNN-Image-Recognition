@@ -2,17 +2,15 @@
 
 A hands-on project building a Convolutional Neural Network from the ground up to classify images into 20 distinct categories using PyTorch.
 
-### Project Overview 🧠
+### Project Overview
 
 This project covers the end-to-end development of a deep learning model for multi-class image classification. The primary objective is to design, build, and train a **Convolutional Neural Network (CNN)** from scratch, emphasizing custom architecture design and robust training practices without relying on pre-trained models.
 
 ---
 
-### Repository Structure 📂
+### Repository Structure
 
 The project is organized with the following files and directories:
-
-* `├──` **`/data`**: This directory is intended to hold the image **dataset** after it has been downloaded from the Releases page. It is intentionally empty in the repository and is listed in `.gitignore`.
 
 * `├──` **`images_clasification_model.ipynb`**: The core of the project. This **Jupyter Notebook** contains the entire workflow, from data loading and preprocessing to model architecture definition, training, and evaluation.
 
@@ -26,14 +24,14 @@ The project is organized with the following files and directories:
 
 ---
 
-### Dataset 🖼️
+### Dataset
 
 The dataset is not stored directly in this repository to keep it lightweight. It can be downloaded from the project's **Releases** page.
 
 #### How to Download the Data:
 
 1.  **Go to the Releases Page:** Click the link below to access the project's releases:  
-    ➡️ **[Go to Project Releases](https://github.com/ricca200xx/Scratch-CNN-Image-Recognition/releases)**
+     **[Go to Project Releases](https://github.com/ricca200xx/Scratch-CNN-Image-Recognition/releases)**
 
 2.  **Download the Archive:** Find the latest release (e.g., `v1.0`) and download the `dataset.zip` file from the "Assets" section.
 
@@ -41,11 +39,11 @@ The dataset is not stored directly in this repository to keep it lightweight. It
 
 ---
 
-### Model Architecture & Training 🛠️
+### Model Architecture & Training 
 
 The model is a **custom Convolutional Neural Network (CNN)** designed and implemented in PyTorch. The architecture is logically separated into two main components: a **feature extractor** composed of convolutional layers and a **classifier** made of fully-connected layers.
 
-#### Architectural Breakdown 🧠
+#### Architectural Breakdown 
 
 The network processes `40x40x3` input images through the following layers:
 
@@ -60,7 +58,7 @@ The network processes `40x40x3` input images through the following layers:
     * **Dropout:** A regularization technique that randomly sets a fraction of input units to 0 during training to prevent overfitting.
     * **Fully-Connected Layer 2 (Output):** The final layer that produces the raw scores (logits) for each of the 20 classes.
 
-#### Training Protocol ⚙️
+#### Training Protocol 
 
 The model was trained from scratch with the following configuration:
 
@@ -75,7 +73,7 @@ For a line-by-line implementation and to see the exact hyperparameters used, ple
 
 ---
 
-### How to Run the Code 🚀
+### How to Run the Code 
 
 1.  **Clone the repository:**
     ```bash
